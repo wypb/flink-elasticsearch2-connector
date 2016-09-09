@@ -21,6 +21,7 @@ val hosts = "www.iteblog.com"
 
 val transports = hosts.split(",").map(host => new InetSocketAddress(InetAddress.getByName(host), 9300)).toList
 
+val data : DataSet[String] = ....
 data.output(new ElasticSearchOutputFormat(config, transports, new ElasticsearchSinkFunction[String] {
       def createIndexRequest(element: String): IndexRequest = {
         Requests.indexRequest.index("iteblog").`type`("info").source(element)
