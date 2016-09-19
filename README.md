@@ -46,13 +46,14 @@ for (String host : hosts.split(",")) {
     list.add(new InetSocketAddress(InetAddress.getByName(host), 9300));
 }
 
-data.output(new ElasticSearchOutputFormat<>(config, list, new ElasticsearchSinkFunction<Map<String, Object>>() {
+DataSet<String> data  = ....;
+data.output(new ElasticSearchOutputFormat<>(config, list, new ElasticsearchSinkFunction<String>() {
     @Override
-    public void process(Map<String, Object> element, RuntimeContext ctx, RequestIndexer indexer) {
+    public void process(String element, RuntimeContext ctx, RequestIndexer indexer) {
         indexer.add(createIndexRequest(element));
     }
 
-    private IndexRequest createIndexRequest(Map<String, Object> element) {
+    private IndexRequest createIndexRequest(String element) {
         return Requests.indexRequest().index("iteblog").type("info").source(element);
     }
 }));
