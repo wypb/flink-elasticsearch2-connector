@@ -27,7 +27,7 @@ under the License.
     <version>1.0.1</version>
 
     <name>flink-elasticsearch2-connector</name>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <url>https://www.iteblog.com</url>
     <inceptionYear>2016</inceptionYear>
 
