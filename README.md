@@ -1,6 +1,6 @@
 # flink-elasticsearch2-connector
 
-Flink DataSet ElasticSearchOutputFormat create by <https://www.iteblog.com>
+Flink DataSet ElasticSearchOutputFormat create by <https://www.iteblog.com> base on `org.apache.flink#flink-connector-elasticsearch2_2.10#1.1.2`
 
 # Usage
 
@@ -13,10 +13,10 @@ Flink DataSet ElasticSearchOutputFormat create by <https://www.iteblog.com>
 </dependency>
 ```
 
-## Using in scala
+## Using in Scala
 ```scala
 import scala.collection.JavaConversions._
-val config = Map("bulk.flush.max.actions" -> "1000", "cluster.name" -> "p_pay_realtime_binlog_qes")
+val config = Map("bulk.flush.max.actions" -> "1000", "cluster.name" -> "elasticsearch")
 val hosts = "www.iteblog.com"
 
 val transports = hosts.split(",").map(host => new InetSocketAddress(InetAddress.getByName(host), 9300)).toList
@@ -31,4 +31,29 @@ data.output(new ElasticSearchOutputFormat(config, transports, new ElasticsearchS
         indexer.add(createIndexRequest(element))
       }
 }))
+```
+
+## Using in Java
+```java
+Map<String, String> config = new HashMap<>();
+config.put("bulk.flush.max.actions", "1000");
+config.put("cluster.name", "elasticsearch");
+
+String hosts = "www.iteblog.com";
+
+List<InetSocketAddress> list = Lists.newArrayList();
+for (String host : hosts.split(",")) {
+    list.add(new InetSocketAddress(InetAddress.getByName(host), 9300));
+}
+
+data.output(new ElasticSearchOutputFormat<>(config, list, new ElasticsearchSinkFunction<Map<String, Object>>() {
+    @Override
+    public void process(Map<String, Object> element, RuntimeContext ctx, RequestIndexer indexer) {
+        indexer.add(createIndexRequest(element));
+    }
+
+    private IndexRequest createIndexRequest(Map<String, Object> element) {
+        return Requests.indexRequest().index("iteblog").type("info").source(element);
+    }
+}));
 ```
