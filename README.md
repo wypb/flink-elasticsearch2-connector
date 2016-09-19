@@ -1,6 +1,6 @@
 # flink-elasticsearch2-connector
 
-Flink DataSet ElasticSearchOutputFormat create by <https://www.iteblog.com> base on `org.apache.flink#flink-connector-elasticsearch2_2.10#1.1.2`
+Flink DataSet ElasticSearchOutputFormat create by <https://www.iteblog.com> based on `org.apache.flink#flink-connector-elasticsearch2_2.10#1.1.2`,We can use it in Scala or Java.
 
 # Usage
 
