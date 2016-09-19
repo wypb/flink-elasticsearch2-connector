@@ -9,7 +9,7 @@ Flink DataSet ElasticSearchOutputFormat create by <https://www.iteblog.com>
 <dependency>
        <groupId>com.iteblog</groupId>
        <artifactId>flink-elasticsearch2-connector</artifactId>
-       <version>${elasticsearch.version}</version>
+       <version>1.0.1</version>
 </dependency>
 ```
 
