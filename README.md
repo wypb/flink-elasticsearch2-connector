@@ -6,7 +6,9 @@ Flink DataSet ElasticSearchOutputFormat create by <https://www.iteblog.com> base
 ## Environment
 
 Elasticsearch: 2.x.x
+
 Flink: 1.x.x
+
 Scala: 2.10.x
 
 ## pom.xml
