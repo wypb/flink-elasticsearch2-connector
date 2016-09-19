@@ -31,6 +31,11 @@ under the License.
     <url>https://www.iteblog.com</url>
     <inceptionYear>2016</inceptionYear>
 
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
 
     <licenses>
         <license>
@@ -45,6 +50,13 @@ under the License.
         <connection>git@github.com:397090770/flink-elasticsearch2-connector.git</connection>
         <developerConnection>https://www.iteblog.com</developerConnection>
     </scm>
+    <developers>
+        <developer>
+            <name>iteblog</name>
+            <email>wyphao.2007@163.com</email>
+            <url>https://www.iteblog.com</url>
+        </developer>
+    </developers>
 
     <properties>
         <elasticsearch.version>2.3.4</elasticsearch.version>
