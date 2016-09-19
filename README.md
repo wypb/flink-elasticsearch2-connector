@@ -47,6 +47,7 @@ for (String host : hosts.split(",")) {
 }
 
 DataSet<String> data  = ....;
+
 data.output(new ElasticSearchOutputFormat<>(config, list, new ElasticsearchSinkFunction<String>() {
     @Override
     public void process(String element, RuntimeContext ctx, RequestIndexer indexer) {
