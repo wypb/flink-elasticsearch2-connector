@@ -1,8 +1,13 @@
 # flink-elasticsearch2-connector
 
-Flink DataSet ElasticSearchOutputFormat create by <https://www.iteblog.com> based on `org.apache.flink#flink-connector-elasticsearch2_2.10#1.1.2`,We can use it in Scala or Java.
+Flink DataSet ElasticSearchOutputFormat create by <https://www.iteblog.com> based on `org.apache.flink#flink-connector-elasticsearch2_2.10#1.1.2`, We can use it in Scala or Java. Through the ElasticSearchOutputFormat, we can save Flink DataSet to elasticsearch.
 
 # Usage
+## Environment
+
+Elasticsearch: 2.x.x
+Flink: 1.x.x
+Scala: 2.10.x
 
 ## pom.xml
 ```xml
