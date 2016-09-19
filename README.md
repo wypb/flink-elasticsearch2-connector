@@ -1,6 +1,6 @@
 # flink-elasticsearch2-connector
 
-Flink DataSet ElasticSearchOutputFormat create by https://www.iteblog.com
+Flink DataSet ElasticSearchOutputFormat create by <https://www.iteblog.com>
 
 # Usage
 

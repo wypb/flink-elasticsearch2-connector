@@ -24,12 +24,12 @@ under the License.
 
     <groupId>com.iteblog</groupId>
     <artifactId>flink-elasticsearch2-connector</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.1</version>
 
-    <name>flink</name>
+    <name>flink-elasticsearch2-connector</name>
     <packaging>pom</packaging>
-    <url>http://flink.apache.org</url>
-    <inceptionYear>2014</inceptionYear>
+    <url>https://www.iteblog.com</url>
+    <inceptionYear>2016</inceptionYear>
 
     <licenses>
         <license>
