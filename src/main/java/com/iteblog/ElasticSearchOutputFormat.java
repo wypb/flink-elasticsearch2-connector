@@ -190,14 +190,15 @@ public class ElasticSearchOutputFormat<T> extends RichOutputFormat<T> {
 
         if (client != null) {
             client.close();
+            client = null;
         }
 
         if (hasFailure.get()) {
             Throwable cause = failureThrowable.get();
             if (cause != null) {
-                throw new RuntimeException("An error occured in ElasticsearchSink.", cause);
+                throw new RuntimeException("An error occured in ElasticSearchOutputFormat.", cause);
             } else {
-                throw new RuntimeException("An error occured in ElasticsearchSink.");
+                throw new RuntimeException("An error occured in ElasticSearchOutputFormat.");
             }
         }
     }
