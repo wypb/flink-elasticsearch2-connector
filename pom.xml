@@ -24,9 +24,10 @@ under the License.
 
     <groupId>com.iteblog</groupId>
     <artifactId>flink-elasticsearch2-connector</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 
     <name>flink-elasticsearch2-connector</name>
+    <description>ElasticSearchOutputFormat for Flink DataSet, Through the ElasticSearchOutputFormat, we can save Flink DataSet to elasticsearch.</description>
     <packaging>jar</packaging>
     <url>https://www.iteblog.com</url>
     <inceptionYear>2016</inceptionYear>
@@ -50,6 +51,7 @@ under the License.
         <connection>git@github.com:397090770/flink-elasticsearch2-connector.git</connection>
         <developerConnection>https://www.iteblog.com</developerConnection>
     </scm>
+    
     <developers>
         <developer>
             <name>iteblog</name>
